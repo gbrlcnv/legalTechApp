@@ -1,0 +1,26 @@
+
+{
+    "legalTechApp": {
+        "requestComment" : {
+            "home": {
+                "title": "Request Comments",
+                "createLabel": "Create a new Request Comment",
+                "createOrEditLabel": "Create or edit a Request Comment"
+            },
+            "created": "A new Request Comment is created with identifier {{ param }}",
+            "updated": "A Request Comment is updated with identifier {{ param }}",
+            "deleted": "A Request Comment is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Request Comment {{ id }}?"
+            },
+            "detail": {
+                "title": "Request Comment"
+            },
+            "text": "Text",
+            "title": "Title",
+            "commentDate": "Comment Date",
+            "inOut": "In Out",
+            "request": "Request"
+        }
+    }
+}

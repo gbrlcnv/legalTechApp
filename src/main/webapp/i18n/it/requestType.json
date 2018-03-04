@@ -1,0 +1,27 @@
+
+{
+    "legalTechApp": {
+        "requestType" : {
+            "home": {
+                "title": "RequestTypes",
+                "createLabel": "Genera un nuovo Request Type",
+                "createOrEditLabel": "Genera o modifica un Request Type"
+            },
+            "created": "&Egrave; stato generato un nuovo Request Type con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Request Type identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Request Type con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Request Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Request Type"
+            },
+            "reqStatus": "Req Status",
+            "code": "Code",
+            "request": "Request",
+            "help": {
+                "code": "tipo di documento utilizzato per l&#39;identificazione"
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+
+{
+    "legalTechApp": {
+        "requestDoc" : {
+            "home": {
+                "title": "RequestDocs",
+                "createLabel": "Genera un nuovo Request Doc",
+                "createOrEditLabel": "Genera o modifica un Request Doc"
+            },
+            "created": "&Egrave; stato generato un nuovo Request Doc con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Request Doc identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Request Doc con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Request Doc {{ id }}?"
+            },
+            "detail": {
+                "title": "Request Doc"
+            },
+            "submissionDate": "Submission Date",
+            "description": "Description",
+            "inOut": "In Out",
+            "request": "Request",
+            "help": {
+                "inOut": "in inviati dall&#39;utente, out inseriti dalla piattaforma"
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+
+<div *ngIf="requestStatusLog">
+    <h2><span jhiTranslate="legalTechApp.requestStatusLog.detail.title">Request Status Log</span> {{requestStatusLog.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="legalTechApp.requestStatusLog.note">Note</span></dt>
+        <dd>
+            <span>{{requestStatusLog.note}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.requestStatusLog.statusFromDate">Status From Date</span></dt>
+        <dd>
+            <span>{{requestStatusLog.statusFromDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.requestStatusLog.statusChangeDate">Status Change Date</span></dt>
+        <dd>
+            <span>{{requestStatusLog.statusChangeDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.requestStatusLog.campaign">Campaign</span></dt>
+        <dd>
+            <div *ngIf="requestStatusLog.campaign">
+                <a [routerLink]="['/request', requestStatusLog.campaign?.id]">{{requestStatusLog.campaign?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.requestStatusLog.oldStatus">Old Status</span></dt>
+        <dd>
+            <div *ngIf="requestStatusLog.oldStatus">
+                <a [routerLink]="['/request-status', requestStatusLog.oldStatus?.id]">{{requestStatusLog.oldStatus?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.requestStatusLog.newStatus">New Status</span></dt>
+        <dd>
+            <div *ngIf="requestStatusLog.newStatus">
+                <a [routerLink]="['/request-status', requestStatusLog.newStatus?.id]">{{requestStatusLog.newStatus?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'request-status-log/'+ requestStatusLog.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

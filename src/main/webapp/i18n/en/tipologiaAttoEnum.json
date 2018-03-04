@@ -1,0 +1,11 @@
+{
+    "legalTechApp": {
+        "TipologiaAttoEnum" : {
+            "null": "",
+            "VERBALEACCERTAMENTO": "VERBALEACCERTAMENTO",
+            "VERBALECOSTATAZIONE": "VERBALECOSTATAZIONE",
+            "CARTELLAESATTORIALE": "CARTELLAESATTORIALE",
+            "PREAVVISOIPOTECA": "PREAVVISOIPOTECA"
+        }
+    }
+}

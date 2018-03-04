@@ -1,0 +1,9 @@
+{
+    "legalTechApp": {
+        "IDTypeEnum" : {
+            "null": "",
+            "CARTAIDENTITA": "CARTAIDENTITA",
+            "PASSAPORTO": "PASSAPORTO"
+        }
+    }
+}

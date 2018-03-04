@@ -1,0 +1,64 @@
+<div>
+    <h2>
+        <span jhiTranslate="legalTechApp.requestRicorsoTributario.home.title">Request Ricorso Tributarios</span>
+        <button class="btn btn-primary float-right jh-create-entity create-request-ricorso-tributario" [routerLink]="['/', { outlets: { popup: ['request-ricorso-tributario-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="legalTechApp.requestRicorsoTributario.home.createLabel">
+            Create new Request Ricorso Tributario
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="requestRicorsoTributarios">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="legalTechApp.requestRicorsoTributario.notificaDate">Notifica Date</span></th>
+            <th><span jhiTranslate="legalTechApp.requestRicorsoTributario.emissioneRuoloDate">Emissione Ruolo Date</span></th>
+            <th><span jhiTranslate="legalTechApp.requestRicorsoTributario.tipologiaAtto">Tipologia Atto</span></th>
+            <th><span jhiTranslate="legalTechApp.requestRicorsoTributario.reqType">Req Type</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let requestRicorsoTributario of requestRicorsoTributarios ;trackBy: trackId">
+                <td><a [routerLink]="['../request-ricorso-tributario', requestRicorsoTributario.id ]">{{requestRicorsoTributario.id}}</a></td>
+                <td>{{requestRicorsoTributario.notificaDate | date:'medium'}}</td>
+                <td>{{requestRicorsoTributario.emissioneRuoloDate | date:'medium'}}</td>
+                <td jhiTranslate="{{'legalTechApp.TipologiaAttoEnum.' + requestRicorsoTributario.tipologiaAtto}}">{{requestRicorsoTributario.tipologiaAtto}}</td>
+                <td jhiTranslate="{{'legalTechApp.ReqTypeEnum.' + requestRicorsoTributario.reqType}}">{{requestRicorsoTributario.reqType}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../request-ricorso-tributario', requestRicorsoTributario.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'request-ricorso-tributario/'+ requestRicorsoTributario.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'request-ricorso-tributario/'+ requestRicorsoTributario.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
