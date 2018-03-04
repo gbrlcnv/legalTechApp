@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "request",
+            "otherEntityName": "request",
+            "otherEntityRelationshipName": "type"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "reqStatus",
+            "fieldType": "RequestStatusEnum",
+            "fieldValues": "PROPOSED,OPEN,CLOSED,REFUSED,APPROVED,DELETED,SUCCESS"
+        },
+        {
+            "fieldName": "code",
+            "javadoc": "tipo di documento utilizzato per l'identificazione",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180304171349",
+    "entityTableName": "request_type",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,33 @@
+
+{
+    "legalTechApp": {
+        "docStore" : {
+            "home": {
+                "title": "DocStores",
+                "createLabel": "Genera un nuovo Doc Store",
+                "createOrEditLabel": "Genera o modifica un Doc Store"
+            },
+            "created": "&Egrave; stato generato un nuovo Doc Store con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Doc Store identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Doc Store con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Doc Store {{ id }}?"
+            },
+            "detail": {
+                "title": "Doc Store"
+            },
+            "locale": "Locale",
+            "code": "Code",
+            "title": "Title",
+            "description": "Description",
+            "contentBinary": "Content Binary",
+            "creationDate": "Creation Date",
+            "contentText": "Content Text",
+            "mimeType": "Mime Type",
+            "path": "Path",
+            "help": {
+                "path": "valutare se serve, nel caso converrebbe mettere enum"
+            }
+        }
+    }
+}

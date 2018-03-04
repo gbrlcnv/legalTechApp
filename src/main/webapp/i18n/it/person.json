@@ -1,0 +1,37 @@
+
+{
+    "legalTechApp": {
+        "person" : {
+            "home": {
+                "title": "People",
+                "createLabel": "Genera un nuovo Person",
+                "createOrEditLabel": "Genera o modifica un Person"
+            },
+            "created": "&Egrave; stato generato un nuovo Person con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Person identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Person con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Person {{ id }}?"
+            },
+            "detail": {
+                "title": "Person"
+            },
+            "name": "Name",
+            "surname": "Surname",
+            "birthDate": "Birth Date",
+            "piva": "Piva",
+            "cf": "Cf",
+            "phoneNumber": "Phone Number",
+            "flagLegal": "Flag Legal",
+            "idType": "Id Type",
+            "idNumber": "Id Number",
+            "flagNewsletter": "Flag Newsletter",
+            "request": "Request",
+            "help": {
+                "surname": "nome o ragione sociale",
+                "flagLegal": "Si per le persone giuridiche",
+                "idNumber": "tipo di documento utilizzato per l&#39;identificazione"
+            }
+        }
+    }
+}

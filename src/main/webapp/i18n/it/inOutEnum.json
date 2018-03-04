@@ -1,0 +1,9 @@
+{
+    "legalTechApp": {
+        "InOutEnum" : {
+            "null": "",
+            "IN": "IN",
+            "OUT": "OUT"
+        }
+    }
+}

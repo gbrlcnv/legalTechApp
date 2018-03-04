@@ -7,6 +7,15 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "person": "Person",
+                "request": "Request",
+                "requestStatusLog": "Request Status Log",
+                "requestType": "Request Type",
+                "docStore": "Doc Store",
+                "requestDoc": "Request Doc",
+                "requestStatus": "Request Status",
+                "requestRicorsoTributario": "Request Ricorso Tributario",
+                "requestComment": "Request Comment",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

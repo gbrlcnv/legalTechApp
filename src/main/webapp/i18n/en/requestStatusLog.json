@@ -1,0 +1,27 @@
+
+{
+    "legalTechApp": {
+        "requestStatusLog" : {
+            "home": {
+                "title": "Request Status Logs",
+                "createLabel": "Create a new Request Status Log",
+                "createOrEditLabel": "Create or edit a Request Status Log"
+            },
+            "created": "A new Request Status Log is created with identifier {{ param }}",
+            "updated": "A Request Status Log is updated with identifier {{ param }}",
+            "deleted": "A Request Status Log is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Request Status Log {{ id }}?"
+            },
+            "detail": {
+                "title": "Request Status Log"
+            },
+            "note": "Note",
+            "statusFromDate": "Status From Date",
+            "statusChangeDate": "Status Change Date",
+            "campaign": "Campaign",
+            "oldStatus": "Old Status",
+            "newStatus": "New Status"
+        }
+    }
+}

@@ -1,0 +1,66 @@
+
+<div *ngIf="docStore">
+    <h2><span jhiTranslate="legalTechApp.docStore.detail.title">Doc Store</span> {{docStore.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="legalTechApp.docStore.locale">Locale</span></dt>
+        <dd>
+            <span jhiTranslate="{{'legalTechApp.LocaleEnum.' + docStore.locale}}">{{docStore.locale}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.docStore.code">Code</span></dt>
+        <dd>
+            <span>{{docStore.code}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.docStore.title">Title</span></dt>
+        <dd>
+            <span>{{docStore.title}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.docStore.description">Description</span></dt>
+        <dd>
+            <span>{{docStore.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.docStore.contentBinary">Content Binary</span></dt>
+        <dd>
+            <div *ngIf="docStore.contentBinary">
+                <a (click)="openFile(docStore.contentBinaryContentType, docStore.contentBinary)">
+                    <img [src]="'data:' + docStore.contentBinaryContentType + ';base64,' + docStore.contentBinary" style="max-width: 100%;" alt="docStore image"/>
+                </a>
+                {{docStore.contentBinaryContentType}}, {{byteSize(docStore.contentBinary)}}
+            </div>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.docStore.creationDate">Creation Date</span></dt>
+        <dd>
+            <span>{{docStore.creationDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.docStore.contentText">Content Text</span></dt>
+        <dd>
+            <div *ngIf="docStore.contentText">
+                <a (click)="openFile(docStore.contentTextContentType, docStore.contentText)" jhiTranslate="entity.action.open">open</a>
+                {{docStore.contentTextContentType}}, {{byteSize(docStore.contentText)}}
+            </div>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.docStore.mimeType">Mime Type</span></dt>
+        <dd>
+            <span>{{docStore.mimeType}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.docStore.path" [ngbTooltip]="'legalTechApp.docStore.help.path' | translate">Path</span></dt>
+        <dd>
+            <span>{{docStore.path}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'doc-store/'+ docStore.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

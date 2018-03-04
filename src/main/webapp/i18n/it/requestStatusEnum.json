@@ -1,0 +1,14 @@
+{
+    "legalTechApp": {
+        "RequestStatusEnum" : {
+            "null": "",
+            "PROPOSED": "PROPOSED",
+            "OPEN": "OPEN",
+            "CLOSED": "CLOSED",
+            "REFUSED": "REFUSED",
+            "APPROVED": "APPROVED",
+            "DELETED": "DELETED",
+            "SUCCESS": "SUCCESS"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+
+<div *ngIf="person">
+    <h2><span jhiTranslate="legalTechApp.person.detail.title">Person</span> {{person.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="legalTechApp.person.name">Name</span></dt>
+        <dd>
+            <span>{{person.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.surname" [ngbTooltip]="'legalTechApp.person.help.surname' | translate">Surname</span></dt>
+        <dd>
+            <span>{{person.surname}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.birthDate">Birth Date</span></dt>
+        <dd>
+            <span>{{person.birthDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.piva">Piva</span></dt>
+        <dd>
+            <span>{{person.piva}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.cf">Cf</span></dt>
+        <dd>
+            <span>{{person.cf}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{person.phoneNumber}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.flagLegal" [ngbTooltip]="'legalTechApp.person.help.flagLegal' | translate">Flag Legal</span></dt>
+        <dd>
+            <span jhiTranslate="{{'legalTechApp.YesNotEnum.' + person.flagLegal}}">{{person.flagLegal}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.idType">Id Type</span></dt>
+        <dd>
+            <span jhiTranslate="{{'legalTechApp.IDTypeEnum.' + person.idType}}">{{person.idType}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.idNumber" [ngbTooltip]="'legalTechApp.person.help.idNumber' | translate">Id Number</span></dt>
+        <dd>
+            <span>{{person.idNumber}}</span>
+        </dd>
+        <dt><span jhiTranslate="legalTechApp.person.flagNewsletter">Flag Newsletter</span></dt>
+        <dd>
+            <span jhiTranslate="{{'legalTechApp.YesNotEnum.' + person.flagNewsletter}}">{{person.flagNewsletter}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'person/'+ person.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

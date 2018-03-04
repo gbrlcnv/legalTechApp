@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="legalTechApp.requestDoc.home.title">Request Docs</span>
+        <button class="btn btn-primary float-right jh-create-entity create-request-doc" [routerLink]="['/', { outlets: { popup: ['request-doc-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="legalTechApp.requestDoc.home.createLabel">
+            Create new Request Doc
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="requestDocs">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="legalTechApp.requestDoc.submissionDate">Submission Date</span></th>
+            <th><span jhiTranslate="legalTechApp.requestDoc.description">Description</span></th>
+            <th><span jhiTranslate="legalTechApp.requestDoc.inOut">In Out</span></th>
+            <th><span jhiTranslate="legalTechApp.requestDoc.request">Request</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let requestDoc of requestDocs ;trackBy: trackId">
+                <td><a [routerLink]="['../request-doc', requestDoc.id ]">{{requestDoc.id}}</a></td>
+                <td>{{requestDoc.submissionDate | date:'medium'}}</td>
+                <td>{{requestDoc.description}}</td>
+                <td jhiTranslate="{{'legalTechApp.InOutEnum.' + requestDoc.inOut}}">{{requestDoc.inOut}}</td>
+                <td>
+                    <div *ngIf="requestDoc.request">
+                        <a [routerLink]="['../request', requestDoc.request?.id ]" >{{requestDoc.request?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../request-doc', requestDoc.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'request-doc/'+ requestDoc.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'request-doc/'+ requestDoc.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

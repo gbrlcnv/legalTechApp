@@ -1,0 +1,30 @@
+
+{
+    "legalTechApp": {
+        "requestRicorsoTributario" : {
+            "home": {
+                "title": "Request Ricorso Tributarios",
+                "createLabel": "Create a new Request Ricorso Tributario",
+                "createOrEditLabel": "Create or edit a Request Ricorso Tributario"
+            },
+            "created": "A new Request Ricorso Tributario is created with identifier {{ param }}",
+            "updated": "A Request Ricorso Tributario is updated with identifier {{ param }}",
+            "deleted": "A Request Ricorso Tributario is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Request Ricorso Tributario {{ id }}?"
+            },
+            "detail": {
+                "title": "Request Ricorso Tributario"
+            },
+            "notificaDate": "Notifica Date",
+            "emissioneRuoloDate": "Emissione Ruolo Date",
+            "tipologiaAtto": "Tipologia Atto",
+            "reqType": "Req Type",
+            "request": "Request",
+            "help": {
+                "emissioneRuoloDate": "nome o ragione sociale",
+                "reqType": "tipo di documento utilizzato per l&#39;identificazione"
+            }
+        }
+    }
+}

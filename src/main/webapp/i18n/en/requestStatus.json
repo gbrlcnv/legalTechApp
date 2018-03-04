@@ -1,0 +1,26 @@
+
+{
+    "legalTechApp": {
+        "requestStatus" : {
+            "home": {
+                "title": "Request Statuses",
+                "createLabel": "Create a new Request Status",
+                "createOrEditLabel": "Create or edit a Request Status"
+            },
+            "created": "A new Request Status is created with identifier {{ param }}",
+            "updated": "A Request Status is updated with identifier {{ param }}",
+            "deleted": "A Request Status is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Request Status {{ id }}?"
+            },
+            "detail": {
+                "title": "Request Status"
+            },
+            "code": "Code",
+            "description": "Description",
+            "request": "Request",
+            "oldStatus": "Old Status",
+            "newStatus": "New Status"
+        }
+    }
+}

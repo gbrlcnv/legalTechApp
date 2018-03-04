@@ -1,0 +1,9 @@
+{
+    "legalTechApp": {
+        "YesNotEnum" : {
+            "null": "",
+            "YES": "YES",
+            "NO": "NO"
+        }
+    }
+}

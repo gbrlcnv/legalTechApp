@@ -1,0 +1,9 @@
+{
+    "legalTechApp": {
+        "ReqTypeEnum" : {
+            "null": "",
+            "RICORSOTRIBUTARIO": "RICORSOTRIBUTARIO",
+            "RATEAZIONE": "RATEAZIONE"
+        }
+    }
+}
